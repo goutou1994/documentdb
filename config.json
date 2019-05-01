@@ -1,0 +1,11 @@
+{
+  "host": "",
+  "authKey": "",
+  "databaseId": "Products",
+  "collectionId": "Clothing",
+  "sql": "select * from root r",
+  "filename": "retrieve_##%date",
+  "removeRedundancy": true,
+  "partitionKey": "",
+  "enableCrossPartitionQuery": false
+}
