@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 async function save({filename}, arr) {
     let s = filename.split('##');
@@ -13,7 +14,7 @@ async function save({filename}, arr) {
     await new Promise((resolve, reject) => {
         files.push(s.join('') + '.json');
         fs.writeFile(
-            `${__dirname}/json/${s.join('')}.json`,
+            path.join(__dirname, '../json', `${s.join('')}.json`),
             JSON.stringify(arr),
             err => {
                 if (err) reject(err);
